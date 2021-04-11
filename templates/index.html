@@ -14,20 +14,20 @@
 	<h1>Predict Heart Disease</h1>
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Sex" placeholder="Male : 1 / Female : 0" required="required" />
-        <input type="text" name="Age" placeholder="age" required="required" />
-		<input type="text" name="CurrentSomker" placeholder="Smoker?" required="required" />
-        <input type="text" name="CiggPerDay" placeholder="Ciggperday" required="required" />
+    	<input type="text" name="sex" placeholder="Male : 1 / Female : 0" required="required" />
+        <input type="text" name="age" placeholder="age" required="required" />
+		<input type="text" name="currentSomker" placeholder="Smoker?" required="required" />
+        <input type="text" name="ciggPerDay" placeholder="Ciggperday" required="required" />
         <input type="text" name="BPMeds" placeholder="bpmeds" required="required" />
-		<input type="text" name="PrevelantStroke" placeholder="stroke?" required="required" />
-        <input type="text" name="PrevalentHype" placeholder="hype?" required="required" />
-        <input type="text" name="Diabetes" placeholder="diabetes?" required="required" />
+		<input type="text" name="prevelantStroke" placeholder="stroke?" required="required" />
+        <input type="text" name="prevalentHype" placeholder="hype?" required="required" />
+        <input type="text" name="diabetes" placeholder="diabetes?" required="required" />
 		<input type="text" name="total_chol" placeholder="chol?" required="required" />
-        <input type="text" name="Sys_BP" placeholder="sysbp?" required="required" />
-        <input type="text" name="Dia_BP" placeholder="diaBp?" required="required" />
+        <input type="text" name="sys_BP" placeholder="sysbp?" required="required" />
+        <input type="text" name="dia_BP" placeholder="diaBp?" required="required" />
 		<input type="text" name="BMI" placeholder="bmi?" required="required" />
-        <input type="text" name="HeartRate" placeholder="heartrate?" required="required" />
-        <input type="text" name="Glucose" placeholder="glucose?" required="required" />
+        <input type="text" name="heartRate" placeholder="heartrate?" required="required" />
+        <input type="text" name="glucose" placeholder="glucose?" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
