@@ -14,13 +14,26 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    int_features = [float(x) for x in request.form.values()]
-    final_features = [np.array(int_features)]
+    sex = request.json['sex']
+    age = request.json['age']
+    currentSmoker = request.json['currentSmoker']
+    cigsPerDay = request.json['cigsPerDay']
+    BPMeds = request.json['BPMeds']
+    prevalentStroke = request.json['prevalentStroke']
+    prevalentHyp = request.json['prevalentHyp']
+    diabetes = request.json['diabetes']
+    totChol = request.json['totChol']
+    sysBP = request.json['sysBP']
+    diaBP = request.json['diaBP']
+    BMI = request.json['BMI']
+    heartRate = request.json['heartRate']
+    glucose = request.json['glucose']
+
+    final_features = [np.array([sex,age,currentSmoker,cigsPerDay,BPMeds,prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose])]
     prediction = model.predict(final_features)
-
+    print(final_features)
     output = round(prediction[0], 2)
-
-    return render_template('index.html', prediction_text='Prediction results are :{}'.format(output))
+    return jsonify({'Output' : output})
 
 if __name__ == "__main__":
     app.run(debug=True)
