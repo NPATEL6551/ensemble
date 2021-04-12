@@ -33,7 +33,7 @@ def predict():
     prediction = model.predict(final_features)
     print(final_features)
     output = round(prediction[0], 2)
-    return jsonify({'Output' : output})
+    return jsonify(output)
 
 if __name__ == "__main__":
     app.run(debug=True)
